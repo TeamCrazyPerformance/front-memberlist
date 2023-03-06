@@ -1,0 +1,32 @@
+body {
+  font-family: sans-serif;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 320px;
+  height: 150px;
+  padding: 10px;
+  box-shadow: 2px 2px 2px 2px gray;
+  background-color: white;
+  flex-grow: 0;
+}
+
+.card-header {
+  display: flex;
+}
+
+.card-footer {
+  display: flex;
+}
