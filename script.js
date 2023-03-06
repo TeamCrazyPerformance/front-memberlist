@@ -9,7 +9,7 @@ function GET() {
       if (xhr.status === 200) {
         users = JSON.parse(xhr.response);
         users.map((obj) => {
-          let card = document.createElement("div");
+          const card = document.createElement("div");
           card.className = "card";
           card.innerHTML = `<article class="card__content"> \
           <span class="card__title">${obj.username}(${obj.name})</span> \
