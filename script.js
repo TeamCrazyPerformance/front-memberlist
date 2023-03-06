@@ -13,14 +13,12 @@ function GET() {
           console.log("arr : " + obj);
           let card = document.createElement("div");
           card.className = "card";
-          card.innerHTML = `<div> \
-                    <div>${obj.name}</div> \
-                    <div>${obj.email}</div> \
-                  </div> \
-                  <div> \
-                    <div>${obj.phone}</div> \
-                    <div>${obj.website}</div> \
-                  </div>`;
+          card.innerHTML = `<article class="card__content"> \
+          <span class="card__title">${obj.username}(${obj.name})</span> \
+          <span class="card__email">${obj.email}</span> \
+          <span class="card__number">${obj.phone}</span> \
+          <span class="card__link">${obj.website}</span> \
+        </article>`;
           container.appendChild(card);
         });
       } else {
