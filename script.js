@@ -7,10 +7,8 @@ function GET() {
   xhr.onreadystatechange = function () {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
-        console.log("연결 성공");
         users = JSON.parse(xhr.response);
         users.map((obj) => {
-          console.log("arr : " + obj);
           let card = document.createElement("div");
           card.className = "card";
           card.innerHTML = `<article class="card__content"> \
@@ -22,7 +20,7 @@ function GET() {
           container.appendChild(card);
         });
       } else {
-        console.log("연결 실패");
+        window.alert("연결 실패!");
       }
     }
   };
